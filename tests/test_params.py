@@ -2,15 +2,16 @@
 
 import pytest
 import opennetzteil
-from requests import exceptions
+from aiohttp import ClientResponseError
 
 # The dummy device does not implement setting a value.
 # For now we are happy when no http errors occur.
 
 
 @pytest.fixture()
-def client():
-    return opennetzteil.Netzteil.connect("http://localhost:8000", 1)
+@pytest.mark.asyncio
+async def client():
+    return await opennetzteil.Netzteil.connect("http://localhost:8000", 1)
 
 
 def test_probe(client):
@@ -19,26 +20,30 @@ def test_probe(client):
     assert client.ident == "dummy-device"
 
 
-def test_get_channel(client):
-    with pytest.raises(exceptions.HTTPError):
-        client.get_channel(412389)
-    on = client.get_channel(1)
+@pytest.mark.asyncio
+async def test_get_channel(client):
+    with pytest.raises(ClientResponseError):
+        await client.get_channel(412389)
+    on = await client.get_channel(1)
     assert on is True
 
 
-def test_set_channel(client):
-    with pytest.raises(exceptions.HTTPError):
-        client.set_channel(412389, False)
-    client.set_channel(1, True)
+@pytest.mark.asyncio
+async def test_set_channel(client):
+    with pytest.raises(ClientResponseError):
+        await client.set_channel(412389, False)
+    await client.set_channel(1, True)
 
 
-def test_get_master(client):
-    on = client.get_channel(0)
+@pytest.mark.asyncio
+async def test_get_master(client):
+    on = await client.get_channel(0)
     assert on is True
-    on = client.get_master()
+    on = await client.get_master()
     assert on is True
 
 
-def test_set_master(client):
-    client.set_channel(0, False)
-    client.set_master(False)
+@pytest.mark.asyncio
+async def test_set_master(client):
+    await client.set_channel(0, False)
+    await client.set_master(False)
