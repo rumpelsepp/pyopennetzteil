@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyopennetzteil"
-version = "0.1.1"
+version = "0.1.2"
 description = "A python client for the opennetzteil specification"
 authors = ["Stefan Tatschner <stefan@rumpelsepp.org>"]
 license = "MIT"
