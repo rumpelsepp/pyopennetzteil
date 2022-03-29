@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "pyopennetzteil"
 version = "0.1.1"
-description = ""
-authors = ["A python client for the opennetzteil specification"]
+description = "A python client for the opennetzteil specification"
+authors = ["Stefan Tatschner <stefan@rumpelsepp.org>"]
 license = "MIT"
+homepage = "https://codeberg.org/rumpelsepp/pyopennetzteil"
 packages = [
     { include = "opennetzteil" },
 ]
