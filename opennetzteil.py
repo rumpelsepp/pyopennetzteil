@@ -9,8 +9,13 @@ import aiohttp
 class Netzteil:
     URL_PREFIX = "/_netzteil/api/"
 
-    def __init__(self, session: aiohttp.ClientSession, host: str, ident: str,
-                 device: int):
+    def __init__(
+        self,
+        session: aiohttp.ClientSession,
+        host: str,
+        ident: str,
+        device: int,
+    ):
         self.host = host
         self.baseurl = urljoin(host, self.URL_PREFIX)
         self.device = device
