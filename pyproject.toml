@@ -4,6 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["A python client for the opennetzteil specification"]
 license = "MIT"
+packages = [
+    { include = "opennetzteil" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
