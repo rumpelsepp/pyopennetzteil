@@ -363,14 +363,14 @@ testing = ["coverage (==6.2)", "hypothesis (>=5.7.1)", "flaky (>=3.5.0)", "mypy 
 
 [[package]]
 name = "python-lsp-black"
-version = "1.2.0"
+version = "1.2.1"
 description = "Black plugin for the Python LSP Server"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
-black = ">=22.1.0"
+black = ">=22.3.0"
 python-lsp-server = ">=1.4.0"
 toml = "*"
 
@@ -476,7 +476,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "7130fb6786c1493b2c37d5a3aced0328d35648685600d51afcdef83f2dd4bebe"
+content-hash = "a2ddda6ecfaea4d6ccc5b4a69b3533ac468bd7ab3fcb4e6948e73534a0e3fc95"
 
 [metadata.files]
 aiohttp = [
@@ -831,8 +831,8 @@ pytest-asyncio = [
     {file = "pytest_asyncio-0.18.3-py3-none-any.whl", hash = "sha256:8fafa6c52161addfd41ee7ab35f11836c5a16ec208f93ee388f752bea3493a84"},
 ]
 python-lsp-black = [
-    {file = "python-lsp-black-1.2.0.tar.gz", hash = "sha256:135ed1af3a14463cf5b6bb5fff4f95c6da5a030e9192ab042ca63febcb0af9d4"},
-    {file = "python_lsp_black-1.2.0-py3-none-any.whl", hash = "sha256:db96cf962685f33c6e026e67050c4a2f9ae8a970dd4b21e144d0c716d069044c"},
+    {file = "python-lsp-black-1.2.1.tar.gz", hash = "sha256:d7eaeab2a377e96a82cc26afe2f8f2e1cf7c6eaefdcdeab026343e2e559dcce9"},
+    {file = "python_lsp_black-1.2.1-py3-none-any.whl", hash = "sha256:9793e69122f7ab51dffa980f026e456b4be62a3400df5c89b6ecf9278b74913a"},
 ]
 python-lsp-jsonrpc = [
     {file = "python-lsp-jsonrpc-1.0.0.tar.gz", hash = "sha256:7bec170733db628d3506ea3a5288ff76aa33c70215ed223abdb0d95e957660bd"},
