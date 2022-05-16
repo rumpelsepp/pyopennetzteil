@@ -1,10 +1,14 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.poetry]
 name = "pyopennetzteil"
 version = "0.1.2"
 description = "A python client for the opennetzteil specification"
 authors = ["Stefan Tatschner <stefan@rumpelsepp.org>"]
 license = "MIT"
-homepage = "https://codeberg.org/rumpelsepp/pyopennetzteil"
+homepage = "https://github.com/rumpelsepp/pyopennetzteil"
 packages = [
     { include = "opennetzteil" },
 ]
@@ -37,7 +41,3 @@ profile = "black"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
